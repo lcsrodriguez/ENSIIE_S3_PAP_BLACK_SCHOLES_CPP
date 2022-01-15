@@ -1,0 +1,123 @@
+\hypertarget{class_mesh}{}\doxysection{Mesh Class Reference}
+\label{class_mesh}\index{Mesh@{Mesh}}
+
+
+Classe \mbox{\hyperlink{class_mesh}{Mesh}} permettant de créer une discrétisation d\textquotesingle{}un domaine spatial ou temporel.  
+
+
+
+
+{\ttfamily \#include $<$Mesh.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mesh_a16c7275f5314aab95fd61b2a0638d3f0}{Mesh}} (double a\+\_\+, int size\+\_\+)
+\begin{DoxyCompactList}\small\item\em Construction d\textquotesingle{}un objet \mbox{\hyperlink{class_mesh}{Mesh}} (création d\textquotesingle{}une discrétisation) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}\label{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}} 
+{\bfseries $\sim$\+Mesh} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \mbox{\hyperlink{class_mesh}{Mesh}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mesh_a0d0e534f3836e6e9559108453daa628c}\label{class_mesh_a0d0e534f3836e6e9559108453daa628c}} 
+double {\bfseries get\+\_\+interval} () const
+\item 
+\mbox{\Hypertarget{class_mesh_a194238af93eb7803dc01de657adab44d}\label{class_mesh_a194238af93eb7803dc01de657adab44d}} 
+int {\bfseries get\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{class_mesh_a8568ce74538029f59db5247a48c04a2c}\label{class_mesh_a8568ce74538029f59db5247a48c04a2c}} 
+double {\bfseries get\+\_\+step} () const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_mesh_ab1594c2237e7ee45756a28993c2a7e8f}{get\+\_\+vector}} ()
+\begin{DoxyCompactList}\small\item\em Fonction retournant une version std\+::vector$<$double$>$ de la discrétisation. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_mesh_a3d7a790cd94c5c9a80cc033de2a4e2ea}{operator\mbox{[}$\,$\mbox{]}}} (int i) const
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur \mbox{[}\mbox{]} (getter par index) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_mesh_acd752128aee5e50be3afe0904c6be0e6}{operator$<$$<$}} (std\+::ostream \&st, const \mbox{\hyperlink{class_mesh}{Mesh}} \&m)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_mesh}{Mesh}} permettant de créer une discrétisation d\textquotesingle{}un domaine spatial ou temporel. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mesh_a16c7275f5314aab95fd61b2a0638d3f0}\label{class_mesh_a16c7275f5314aab95fd61b2a0638d3f0}} 
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{double}]{a\+\_\+,  }\item[{int}]{size\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Construction d\textquotesingle{}un objet \mbox{\hyperlink{class_mesh}{Mesh}} (création d\textquotesingle{}une discrétisation) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+} & \\
+\hline
+{\em size\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mesh_ab1594c2237e7ee45756a28993c2a7e8f}\label{class_mesh_ab1594c2237e7ee45756a28993c2a7e8f}} 
+\index{Mesh@{Mesh}!get\_vector@{get\_vector}}
+\index{get\_vector@{get\_vector}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{get\_vector()}{get\_vector()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Mesh\+::get\+\_\+vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction retournant une version std\+::vector$<$double$>$ de la discrétisation. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$double$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mesh_a3d7a790cd94c5c9a80cc033de2a4e2ea}\label{class_mesh_a3d7a790cd94c5c9a80cc033de2a4e2ea}} 
+\index{Mesh@{Mesh}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily double Mesh\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Surcharge de l\textquotesingle{}opérateur \mbox{[}\mbox{]} (getter par index) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Indice de l\textquotesingle{}objet à retourner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_mesh_acd752128aee5e50be3afe0904c6be0e6}\label{class_mesh_acd752128aee5e50be3afe0904c6be0e6}} 
+\index{Mesh@{Mesh}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Mesh@{Mesh}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{st,  }\item[{const \mbox{\hyperlink{class_mesh}{Mesh}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em st} & Flux de sortie standard \\
+\hline
+{\em m} & Objet de \mbox{\hyperlink{class_mesh}{Mesh}} (discrétisation) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/Mesh.\+h\item 
+source/Mesh.\+cpp\end{DoxyCompactItemize}

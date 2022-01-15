@@ -1,0 +1,35 @@
+\hypertarget{_mesh_8h_source}{}\doxysection{Mesh.\+h}
+\label{_mesh_8h_source}\index{source/Mesh.h@{source/Mesh.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_H\_MESH}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_H\_MESH}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_mesh}{Mesh}} \{}
+\DoxyCodeLine{11     \textcolor{keyword}{private}:}
+\DoxyCodeLine{12         \textcolor{keywordtype}{double}* data;   \textcolor{comment}{// Tableau contenant la discrétisation temporelle}}
+\DoxyCodeLine{13         \textcolor{keywordtype}{double} a;       \textcolor{comment}{// Largeur de l'intervalle}}
+\DoxyCodeLine{14         \textcolor{keywordtype}{int} size;       \textcolor{comment}{// Nombre de subdivisions}}
+\DoxyCodeLine{15     \textcolor{keyword}{public}:}
+\DoxyCodeLine{16         \mbox{\hyperlink{class_mesh_a16c7275f5314aab95fd61b2a0638d3f0}{Mesh}}(\textcolor{keywordtype}{double} a\_, \textcolor{keywordtype}{int} size\_);}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_mesh_a5efe4da1a4c0971cfb037bd70304c303}{\string~Mesh}}();}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \textcolor{keywordtype}{double} get\_interval()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} a; \}}
+\DoxyCodeLine{21         \textcolor{keywordtype}{int} get\_size()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} size; \}}
+\DoxyCodeLine{22         \textcolor{keywordtype}{double} get\_step()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} (\textcolor{keywordtype}{double})(a / size); \}}
+\DoxyCodeLine{23         std::vector<double> \mbox{\hyperlink{class_mesh_ab1594c2237e7ee45756a28993c2a7e8f}{get\_vector}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_mesh_a3d7a790cd94c5c9a80cc033de2a4e2ea}{operator[]}}(\textcolor{keywordtype}{int} i) \textcolor{keyword}{const};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keyword}{public}:}
+\DoxyCodeLine{29         \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_mesh_acd752128aee5e50be3afe0904c6be0e6}{operator<<}}(std::ostream\& st, \textcolor{keyword}{const} \mbox{\hyperlink{class_mesh}{Mesh}}\& m);}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

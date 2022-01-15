@@ -1,0 +1,65 @@
+\hypertarget{_p_d_e_8h_source}{}\doxysection{PDE.\+h}
+\label{_p_d_e_8h_source}\index{source/PDE.h@{source/PDE.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_H\_PDE}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_H\_PDE}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Option.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_p_d_e}{PDE}} \{}
+\DoxyCodeLine{11     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{12         \mbox{\hyperlink{class_option}{Option}}* option;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keyword}{public}:}
+\DoxyCodeLine{15         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} get\_coeff\_a() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{16         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} get\_cdt\_bord\_b(\textcolor{keywordtype}{double} t) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{17         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} get\_cdt\_bord\_h(\textcolor{keywordtype}{double} t, \textcolor{keywordtype}{double} s) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{18         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} get\_cdt\_term(\textcolor{keywordtype}{double} s) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{class_complete_p_d_e}{CompletePDE}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_p_d_e}{PDE}} \{}
+\DoxyCodeLine{25     \textcolor{keyword}{private}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_option}{Option}}* option;}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keyword}{public}:}
+\DoxyCodeLine{29         \mbox{\hyperlink{class_complete_p_d_e}{CompletePDE}}(\mbox{\hyperlink{class_option}{Option}}* option\_) : option(option\_)\{\};}
+\DoxyCodeLine{30         \mbox{\hyperlink{class_complete_p_d_e}{\string~CompletePDE}}();}
+\DoxyCodeLine{31         \mbox{\hyperlink{class_option}{Option}}* get\_option()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} option; \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{public}:}
+\DoxyCodeLine{34         \textcolor{comment}{// Getters pour les coefficients}}
+\DoxyCodeLine{35         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_complete_p_d_e_a5bcfde1af57443d88666ed1e87219c5a}{get\_coeff\_a}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{36         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_complete_p_d_e_af7f6ba21fc479428756ba9a245ac3bbb}{get\_coeff\_b}}(\textcolor{keywordtype}{double} s) \textcolor{keyword}{const};}
+\DoxyCodeLine{37         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_complete_p_d_e_a7c8a6b7eb546eb3a1ffbb04a2b5cd1fa}{get\_coeff\_c}}(\textcolor{keywordtype}{double} s) \textcolor{keyword}{const};}
+\DoxyCodeLine{38         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_complete_p_d_e_ac4c1ee43e073fc11fdbb2b0845764604}{get\_coeff\_d}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         \textcolor{comment}{// Getters pour les conditions aux bords}}
+\DoxyCodeLine{41         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_complete_p_d_e_a6f7f41c75c7a8eeae94a449eb5ff2cc0}{get\_cdt\_bord\_b}}(\textcolor{keywordtype}{double} t) \textcolor{keyword}{const};}
+\DoxyCodeLine{42         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_complete_p_d_e_a46e673e8ebaec4c52c4d1e3a713b4c4d}{get\_cdt\_bord\_h}}(\textcolor{keywordtype}{double} t, \textcolor{keywordtype}{double} s) \textcolor{keyword}{const};}
+\DoxyCodeLine{43         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_complete_p_d_e_a20fc4396f7343b81d6cf8469a1435137}{get\_cdt\_term}}(\textcolor{keywordtype}{double} s) \textcolor{keyword}{const};}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49 \textcolor{keyword}{class }\mbox{\hyperlink{class_reduced_p_d_e}{ReducedPDE}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_p_d_e}{PDE}} \{}
+\DoxyCodeLine{50     \textcolor{keyword}{private}:}
+\DoxyCodeLine{51         \mbox{\hyperlink{class_option}{Option}}* option;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keyword}{public}:}
+\DoxyCodeLine{54         \mbox{\hyperlink{class_reduced_p_d_e}{ReducedPDE}}(\mbox{\hyperlink{class_option}{Option}}* option\_) : option(option\_)\{\};}
+\DoxyCodeLine{55         \mbox{\hyperlink{class_reduced_p_d_e}{\string~ReducedPDE}}();}
+\DoxyCodeLine{56         \mbox{\hyperlink{class_option}{Option}}* get\_option()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} option; \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keyword}{public}:}
+\DoxyCodeLine{59         \textcolor{comment}{// Getters pour les coefficients}}
+\DoxyCodeLine{60         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_reduced_p_d_e_a8c06873a143622cc369fc6bfad81e9be}{get\_coeff\_a}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{61         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_reduced_p_d_e_a43d041fa5e3d275c9b463ba3dd7c5b6e}{get\_coeff\_b}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \textcolor{comment}{// Getters pour les conditions aux bords}}
+\DoxyCodeLine{64         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_reduced_p_d_e_ad4a1d797e43ab45f2071a33c19e9efbb}{get\_cdt\_bord\_b}}(\textcolor{keywordtype}{double} t) \textcolor{keyword}{const};}
+\DoxyCodeLine{65         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_reduced_p_d_e_a43f5d60a3d23694c72ab6963e77a6a8c}{get\_cdt\_bord\_h}}(\textcolor{keywordtype}{double} t, \textcolor{keywordtype}{double} s) \textcolor{keyword}{const};}
+\DoxyCodeLine{66         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_reduced_p_d_e_a883f50c931414f6a2d7a7e0c2bf1a95b}{get\_cdt\_term}}(\textcolor{keywordtype}{double} s) \textcolor{keyword}{const};}
+\DoxyCodeLine{67 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

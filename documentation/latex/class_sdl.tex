@@ -1,0 +1,70 @@
+\hypertarget{class_sdl}{}\doxysection{Sdl Class Reference}
+\label{class_sdl}\index{Sdl@{Sdl}}
+
+
+Classe \mbox{\hyperlink{class_sdl}{Sdl}} permettant de gérer l\textquotesingle{}affichage simultané des 4 fenêtres graphiques.  
+
+
+
+
+{\ttfamily \#include $<$Sdl.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sdl_adc501e37d45c124f9382ded1a888f0a7}\label{class_sdl_adc501e37d45c124f9382ded1a888f0a7}} 
+{\bfseries Sdl} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_sdl}{Sdl}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sdl_a8a2df486e7ebe0eb14a50fb4ecf812c7}\label{class_sdl_a8a2df486e7ebe0eb14a50fb4ecf812c7}} 
+void {\bfseries wait\+\_\+for\+\_\+close} ()
+\begin{DoxyCompactList}\small\item\em Fonction faisant office de waiter (attente) avant la fermeture des fenêtres (programmation évènementielle) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sdl_a41f61403a956adc385384a25e9be69e4}\label{class_sdl_a41f61403a956adc385384a25e9be69e4}} 
+void {\bfseries show} ()
+\begin{DoxyCompactList}\small\item\em Fonction affichant les différentes fenêtres et les données correspondantes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sdl_a3ed7079f2ae6e3bdd55a2aa1eba9498b}{close}} (\mbox{\hyperlink{class_window}{Window}} $\ast$w\+\_\+)
+\begin{DoxyCompactList}\small\item\em Fonction fermant la fenêtre en question. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sdl_a8143d9547e4975bea84f4a973f076911}\label{class_sdl_a8143d9547e4975bea84f4a973f076911}} 
+void {\bfseries quit} ()
+\begin{DoxyCompactList}\small\item\em Fonction pour quitter le procesus d\textquotesingle{}affichage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sdl_a33fbd35e4847d3ec2a1d32db333af993}\label{class_sdl_a33fbd35e4847d3ec2a1d32db333af993}} 
+\mbox{\hyperlink{class_window}{Window}} $\ast$ {\bfseries w1}
+\item 
+\mbox{\Hypertarget{class_sdl_ae1dc2818fae8a3e3fc0ec2e56e813de2}\label{class_sdl_ae1dc2818fae8a3e3fc0ec2e56e813de2}} 
+\mbox{\hyperlink{class_window}{Window}} $\ast$ {\bfseries w2}
+\item 
+\mbox{\Hypertarget{class_sdl_a0edfe8301ff51d5c9a6040b540cc8c74}\label{class_sdl_a0edfe8301ff51d5c9a6040b540cc8c74}} 
+\mbox{\hyperlink{class_window}{Window}} $\ast$ {\bfseries w3}
+\item 
+\mbox{\Hypertarget{class_sdl_a1f5afd758f7398f79ecf09dce1d74f2e}\label{class_sdl_a1f5afd758f7398f79ecf09dce1d74f2e}} 
+\mbox{\hyperlink{class_window}{Window}} $\ast$ {\bfseries w4}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_sdl}{Sdl}} permettant de gérer l\textquotesingle{}affichage simultané des 4 fenêtres graphiques. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sdl_a3ed7079f2ae6e3bdd55a2aa1eba9498b}\label{class_sdl_a3ed7079f2ae6e3bdd55a2aa1eba9498b}} 
+\index{Sdl@{Sdl}!close@{close}}
+\index{close@{close}!Sdl@{Sdl}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Sdl\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_window}{Window}} $\ast$}]{w\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Fonction fermant la fenêtre en question. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w\+\_\+} & Pointeur d\textquotesingle{}une fenêtre \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/Sdl.\+h\item 
+source/Sdl.\+cpp\end{DoxyCompactItemize}

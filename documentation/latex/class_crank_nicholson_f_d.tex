@@ -1,0 +1,297 @@
+\hypertarget{class_crank_nicholson_f_d}{}\doxysection{Crank\+Nicholson\+FD Class Reference}
+\label{class_crank_nicholson_f_d}\index{CrankNicholsonFD@{CrankNicholsonFD}}
+
+
+Classe implémentant la méthode de Crank-\/\+Nicholson des différences finies.  
+
+
+
+
+{\ttfamily \#include $<$Finite\+Difference.\+h$>$}
+
+Inheritance diagram for Crank\+Nicholson\+FD\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_crank_nicholson_f_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_crank_nicholson_f_d_a25f5c6c82f436bbc5e4595144c1aad81}{Crank\+Nicholson\+FD}} (\mbox{\hyperlink{class_complete_p_d_e}{Complete\+PDE}} $\ast$pde\+\_\+, int M\+\_\+, int N\+\_\+, double L\+\_\+, double T\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructeur du résolveur par méthode de Crank-\/\+Nicholson. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_a0c823c4fb48ff83637276cae7b994cd9}{set\+\_\+mesh}} ()
+\begin{DoxyCompactList}\small\item\em Fonction réalisant la discrétisation en temps et en espace. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_a5fc7399f3c6d41b2dc1c0fefdbf465ec}{set\+\_\+matrix\+\_\+coefficients}} ()
+\begin{DoxyCompactList}\small\item\em Fonction calculant et stockant les coefficients a, b, c et d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_a9c391104ad3179f456595b6cdb5caff1}{set\+\_\+coefficients\+\_\+\+M1}} ()
+\begin{DoxyCompactList}\small\item\em Fonction remplissant les coefficients a, b, c dans la matrice M1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a9c7d01b2fd5a752f0298737edbba3695}\label{class_crank_nicholson_f_d_a9c7d01b2fd5a752f0298737edbba3695}} 
+void {\bfseries set\+\_\+coefficients\+\_\+\+M2} ()
+\begin{DoxyCompactList}\small\item\em Fonction remplissant les coefficients d, e et f dans la matrice M2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_a651f596e48cbc4662972526397b14c7c}{set\+\_\+terminal\+\_\+condition}} ()
+\begin{DoxyCompactList}\small\item\em Fonction implémentant la condition terminale sur le vecteur C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_ac4f211d759dd10e34756b9b171ecf9a8}{compute\+\_\+solution}} ()
+\begin{DoxyCompactList}\small\item\em Fonction calculant la solution numérique de l\textquotesingle{}EDP en suivant le schéma de Crank-\/\+Nicholson. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_a1b5964795d48a6752216249744ebc5d8}{compute\+\_\+vector\+\_\+k}} (int m)
+\begin{DoxyCompactList}\small\item\em Fonction calculant la valeur du vecteur k à l\textquotesingle{}instant t\+\_\+\{m\}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_a7632dc54a71878702f80a73f0434849b}{compute\+\_\+\+RHS\+\_\+member}} (Matrix M, std\+::vector$<$ double $>$ v)
+\begin{DoxyCompactList}\small\item\em Fonction calculant le terme de droite de l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_crank_nicholson_f_d_ae4c4d031a55e4447df0d471d4abd0a98}{thomas\+\_\+algo}} (std\+::vector$<$ double $>$ a\+\_\+, std\+::vector$<$ double $>$ b\+\_\+, std\+::vector$<$ double $>$ c\+\_\+, std\+::vector$<$ double $>$ d\+\_\+)
+\begin{DoxyCompactList}\small\item\em Fonction résolvant le système M2 $\ast$ C = RHS ==\texorpdfstring{$>$}{>} solution C dans le vecteur C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crank_nicholson_f_d_aa9e1329db746db3d1feb752ec1f003f8}{safe\+\_\+csv}} (const char $\ast$file\+\_\+title)
+\begin{DoxyCompactList}\small\item\em Fonction enregistrant sur un fichier CSV les solutions trouvées par le solveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a5122c32896ce83af69d6a9f86b96b3ca}\label{class_crank_nicholson_f_d_a5122c32896ce83af69d6a9f86b96b3ca}} 
+\mbox{\hyperlink{class_complete_p_d_e}{Complete\+PDE}} $\ast$ {\bfseries pde}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_af5a92b59ca745c4196fb6f29848cac0a}\label{class_crank_nicholson_f_d_af5a92b59ca745c4196fb6f29848cac0a}} 
+int {\bfseries M}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a816f6979bca6798dada479b9a0b6bb2a}\label{class_crank_nicholson_f_d_a816f6979bca6798dada479b9a0b6bb2a}} 
+int {\bfseries N}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a9086fd6e0739698b727d9009caab23b1}\label{class_crank_nicholson_f_d_a9086fd6e0739698b727d9009caab23b1}} 
+double {\bfseries T}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a94d36d43099883a20cab24ff3ee7814f}\label{class_crank_nicholson_f_d_a94d36d43099883a20cab24ff3ee7814f}} 
+double {\bfseries L}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_ab174107c2e25f99cddd5b4125a7846e1}\label{class_crank_nicholson_f_d_ab174107c2e25f99cddd5b4125a7846e1}} 
+double {\bfseries r}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_afef6f62a5455c738dd3e8e12a66a737b}\label{class_crank_nicholson_f_d_afef6f62a5455c738dd3e8e12a66a737b}} 
+double {\bfseries sigma}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a89c177470c202a2ceb36b2304dbe3d41}\label{class_crank_nicholson_f_d_a89c177470c202a2ceb36b2304dbe3d41}} 
+\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$ {\bfseries t}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_aa4f104c9ef91218daee67fe6512f7b95}\label{class_crank_nicholson_f_d_aa4f104c9ef91218daee67fe6512f7b95}} 
+\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$ {\bfseries s}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a1f89cdad80295d81fc14ce4edea8c052}\label{class_crank_nicholson_f_d_a1f89cdad80295d81fc14ce4edea8c052}} 
+double {\bfseries dt}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a3194badc17b5a16a90ed9ed061c40072}\label{class_crank_nicholson_f_d_a3194badc17b5a16a90ed9ed061c40072}} 
+double {\bfseries ds}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a02c43c59493b639cb2411fddb6f6baab}\label{class_crank_nicholson_f_d_a02c43c59493b639cb2411fddb6f6baab}} 
+std\+::vector$<$ double $>$ {\bfseries a}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a0465987abaec94257aa7cc5914499085}\label{class_crank_nicholson_f_d_a0465987abaec94257aa7cc5914499085}} 
+std\+::vector$<$ double $>$ {\bfseries b}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_abd14af7a55d167c922ce8fbf057f998a}\label{class_crank_nicholson_f_d_abd14af7a55d167c922ce8fbf057f998a}} 
+std\+::vector$<$ double $>$ {\bfseries c}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_abc33937faa9278f0e962b78189116a1b}\label{class_crank_nicholson_f_d_abc33937faa9278f0e962b78189116a1b}} 
+std\+::vector$<$ double $>$ {\bfseries d}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a402bf7bd7d05fc826d5e6dbd2b369a0d}\label{class_crank_nicholson_f_d_a402bf7bd7d05fc826d5e6dbd2b369a0d}} 
+std\+::vector$<$ double $>$ {\bfseries e}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a3d82e000ef13dfc82f42828c6e6578c4}\label{class_crank_nicholson_f_d_a3d82e000ef13dfc82f42828c6e6578c4}} 
+std\+::vector$<$ double $>$ {\bfseries f}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a359f3a1e247bf43da3a4837592dc5e23}\label{class_crank_nicholson_f_d_a359f3a1e247bf43da3a4837592dc5e23}} 
+std\+::vector$<$ double $>$ {\bfseries C}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a750e20c368fd6271d79d3093a7e234b0}\label{class_crank_nicholson_f_d_a750e20c368fd6271d79d3093a7e234b0}} 
+Matrix {\bfseries M1}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a0b4138738d010536d32eaf6f64a81d7c}\label{class_crank_nicholson_f_d_a0b4138738d010536d32eaf6f64a81d7c}} 
+Matrix {\bfseries M2}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_af0765d375cf7af150a6ecec3275a1cbf}\label{class_crank_nicholson_f_d_af0765d375cf7af150a6ecec3275a1cbf}} 
+std\+::vector$<$ double $>$ {\bfseries k}
+\item 
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a93e280e3a1326f496729321c0f6d3190}\label{class_crank_nicholson_f_d_a93e280e3a1326f496729321c0f6d3190}} 
+std\+::vector$<$ double $>$ {\bfseries RHS}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe implémentant la méthode de Crank-\/\+Nicholson des différences finies. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a25f5c6c82f436bbc5e4595144c1aad81}\label{class_crank_nicholson_f_d_a25f5c6c82f436bbc5e4595144c1aad81}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!CrankNicholsonFD@{CrankNicholsonFD}}
+\index{CrankNicholsonFD@{CrankNicholsonFD}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{CrankNicholsonFD()}{CrankNicholsonFD()}}
+{\footnotesize\ttfamily Crank\+Nicholson\+FD\+::\+Crank\+Nicholson\+FD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_complete_p_d_e}{Complete\+PDE}} $\ast$}]{pde\+\_\+,  }\item[{int}]{M\+\_\+,  }\item[{int}]{N\+\_\+,  }\item[{double}]{L\+\_\+,  }\item[{double}]{T\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructeur du résolveur par méthode de Crank-\/\+Nicholson. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pde\+\_\+} & EDP réduite \\
+\hline
+{\em M\+\_\+} & M \+: nombre d\textquotesingle{}intervalles temporels \\
+\hline
+{\em N\+\_\+} & N \+: nombre d\textquotesingle{}intervalles spatiaux \\
+\hline
+{\em L\+\_\+} & L \+: longueur du domaine spatial \\
+\hline
+{\em T\+\_\+} & T \+: longueur du domaine temporel \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a7632dc54a71878702f80a73f0434849b}\label{class_crank_nicholson_f_d_a7632dc54a71878702f80a73f0434849b}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!compute\_RHS\_member@{compute\_RHS\_member}}
+\index{compute\_RHS\_member@{compute\_RHS\_member}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{compute\_RHS\_member()}{compute\_RHS\_member()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::compute\+\_\+\+RHS\+\_\+member (\begin{DoxyParamCaption}\item[{Matrix}]{M,  }\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant le terme de droite de l\textquotesingle{}expression. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_ac4f211d759dd10e34756b9b171ecf9a8}\label{class_crank_nicholson_f_d_ac4f211d759dd10e34756b9b171ecf9a8}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!compute\_solution@{compute\_solution}}
+\index{compute\_solution@{compute\_solution}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{compute\_solution()}{compute\_solution()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::compute\+\_\+solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant la solution numérique de l\textquotesingle{}EDP en suivant le schéma de Crank-\/\+Nicholson. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a1b5964795d48a6752216249744ebc5d8}\label{class_crank_nicholson_f_d_a1b5964795d48a6752216249744ebc5d8}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!compute\_vector\_k@{compute\_vector\_k}}
+\index{compute\_vector\_k@{compute\_vector\_k}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{compute\_vector\_k()}{compute\_vector\_k()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::compute\+\_\+vector\+\_\+k (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant la valeur du vecteur k à l\textquotesingle{}instant t\+\_\+\{m\}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Entier m correspondant à l\textquotesingle{}instant t\+\_\+m \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_aa9e1329db746db3d1feb752ec1f003f8}\label{class_crank_nicholson_f_d_aa9e1329db746db3d1feb752ec1f003f8}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!safe\_csv@{safe\_csv}}
+\index{safe\_csv@{safe\_csv}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{safe\_csv()}{safe\_csv()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::safe\+\_\+csv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction enregistrant sur un fichier CSV les solutions trouvées par le solveur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+title} & Titre du fichier \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a9c391104ad3179f456595b6cdb5caff1}\label{class_crank_nicholson_f_d_a9c391104ad3179f456595b6cdb5caff1}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!set\_coefficients\_M1@{set\_coefficients\_M1}}
+\index{set\_coefficients\_M1@{set\_coefficients\_M1}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{set\_coefficients\_M1()}{set\_coefficients\_M1()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::set\+\_\+coefficients\+\_\+\+M1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction remplissant les coefficients a, b, c dans la matrice M1. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a5fc7399f3c6d41b2dc1c0fefdbf465ec}\label{class_crank_nicholson_f_d_a5fc7399f3c6d41b2dc1c0fefdbf465ec}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!set\_matrix\_coefficients@{set\_matrix\_coefficients}}
+\index{set\_matrix\_coefficients@{set\_matrix\_coefficients}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{set\_matrix\_coefficients()}{set\_matrix\_coefficients()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::set\+\_\+matrix\+\_\+coefficients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant et stockant les coefficients a, b, c et d. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a0c823c4fb48ff83637276cae7b994cd9}\label{class_crank_nicholson_f_d_a0c823c4fb48ff83637276cae7b994cd9}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!set\_mesh@{set\_mesh}}
+\index{set\_mesh@{set\_mesh}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{set\_mesh()}{set\_mesh()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::set\+\_\+mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction réalisant la discrétisation en temps et en espace. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_a651f596e48cbc4662972526397b14c7c}\label{class_crank_nicholson_f_d_a651f596e48cbc4662972526397b14c7c}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!set\_terminal\_condition@{set\_terminal\_condition}}
+\index{set\_terminal\_condition@{set\_terminal\_condition}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{set\_terminal\_condition()}{set\_terminal\_condition()}}
+{\footnotesize\ttfamily void Crank\+Nicholson\+FD\+::set\+\_\+terminal\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction implémentant la condition terminale sur le vecteur C. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_crank_nicholson_f_d_ae4c4d031a55e4447df0d471d4abd0a98}\label{class_crank_nicholson_f_d_ae4c4d031a55e4447df0d471d4abd0a98}} 
+\index{CrankNicholsonFD@{CrankNicholsonFD}!thomas\_algo@{thomas\_algo}}
+\index{thomas\_algo@{thomas\_algo}!CrankNicholsonFD@{CrankNicholsonFD}}
+\doxysubsubsection{\texorpdfstring{thomas\_algo()}{thomas\_algo()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Crank\+Nicholson\+FD\+::thomas\+\_\+algo (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{a\+\_\+,  }\item[{std\+::vector$<$ double $>$}]{b\+\_\+,  }\item[{std\+::vector$<$ double $>$}]{c\+\_\+,  }\item[{std\+::vector$<$ double $>$}]{d\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction résolvant le système M2 $\ast$ C = RHS ==\texorpdfstring{$>$}{>} solution C dans le vecteur C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+} & Bande diagonale inférieure \\
+\hline
+{\em b\+\_\+} & Bande diagonale \\
+\hline
+{\em c\+\_\+} & Bande diagonale supérieure \\
+\hline
+{\em d\+\_\+} & RHS \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/Finite\+Difference.\+h\item 
+source/Finite\+Difference.\+cpp\end{DoxyCompactItemize}

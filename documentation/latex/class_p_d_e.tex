@@ -1,0 +1,85 @@
+\hypertarget{class_p_d_e}{}\doxysection{PDE Class Reference}
+\label{class_p_d_e}\index{PDE@{PDE}}
+
+
+Classe abstraite numérisant une EDP à partir d\textquotesingle{}une option.  
+
+
+
+
+{\ttfamily \#include $<$PDE.\+h$>$}
+
+Inheritance diagram for PDE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_d_e}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_p_d_e_a396583550d5c7e0feddc92bddae986a0}{get\+\_\+coeff\+\_\+a}} () const =0
+\item 
+virtual double \mbox{\hyperlink{class_p_d_e_ace74d5b7a829db1b1baf65cf652f7f9f}{get\+\_\+cdt\+\_\+bord\+\_\+b}} (double t) const =0
+\item 
+virtual double \mbox{\hyperlink{class_p_d_e_a851d8959bd72559012de3827d723b900}{get\+\_\+cdt\+\_\+bord\+\_\+h}} (double t, double s) const =0
+\item 
+virtual double \mbox{\hyperlink{class_p_d_e_ab6f640f9b0cc0ab31e5635ae538ea8f5}{get\+\_\+cdt\+\_\+term}} (double s) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_p_d_e_ad5d876d8bc9a910dca9ed2beb0b96ef6}\label{class_p_d_e_ad5d876d8bc9a910dca9ed2beb0b96ef6}} 
+\mbox{\hyperlink{class_option}{Option}} $\ast$ {\bfseries option}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe abstraite numérisant une EDP à partir d\textquotesingle{}une option. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_d_e_ace74d5b7a829db1b1baf65cf652f7f9f}\label{class_p_d_e_ace74d5b7a829db1b1baf65cf652f7f9f}} 
+\index{PDE@{PDE}!get\_cdt\_bord\_b@{get\_cdt\_bord\_b}}
+\index{get\_cdt\_bord\_b@{get\_cdt\_bord\_b}!PDE@{PDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_bord\_b()}{get\_cdt\_bord\_b()}}
+{\footnotesize\ttfamily virtual double PDE\+::get\+\_\+cdt\+\_\+bord\+\_\+b (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_complete_p_d_e_a6f7f41c75c7a8eeae94a449eb5ff2cc0}{Complete\+PDE}}, and \mbox{\hyperlink{class_reduced_p_d_e_ad4a1d797e43ab45f2071a33c19e9efbb}{Reduced\+PDE}}.
+
+\mbox{\Hypertarget{class_p_d_e_a851d8959bd72559012de3827d723b900}\label{class_p_d_e_a851d8959bd72559012de3827d723b900}} 
+\index{PDE@{PDE}!get\_cdt\_bord\_h@{get\_cdt\_bord\_h}}
+\index{get\_cdt\_bord\_h@{get\_cdt\_bord\_h}!PDE@{PDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_bord\_h()}{get\_cdt\_bord\_h()}}
+{\footnotesize\ttfamily virtual double PDE\+::get\+\_\+cdt\+\_\+bord\+\_\+h (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_complete_p_d_e_a46e673e8ebaec4c52c4d1e3a713b4c4d}{Complete\+PDE}}, and \mbox{\hyperlink{class_reduced_p_d_e_a43f5d60a3d23694c72ab6963e77a6a8c}{Reduced\+PDE}}.
+
+\mbox{\Hypertarget{class_p_d_e_ab6f640f9b0cc0ab31e5635ae538ea8f5}\label{class_p_d_e_ab6f640f9b0cc0ab31e5635ae538ea8f5}} 
+\index{PDE@{PDE}!get\_cdt\_term@{get\_cdt\_term}}
+\index{get\_cdt\_term@{get\_cdt\_term}!PDE@{PDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_term()}{get\_cdt\_term()}}
+{\footnotesize\ttfamily virtual double PDE\+::get\+\_\+cdt\+\_\+term (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_complete_p_d_e_a20fc4396f7343b81d6cf8469a1435137}{Complete\+PDE}}, and \mbox{\hyperlink{class_reduced_p_d_e_a883f50c931414f6a2d7a7e0c2bf1a95b}{Reduced\+PDE}}.
+
+\mbox{\Hypertarget{class_p_d_e_a396583550d5c7e0feddc92bddae986a0}\label{class_p_d_e_a396583550d5c7e0feddc92bddae986a0}} 
+\index{PDE@{PDE}!get\_coeff\_a@{get\_coeff\_a}}
+\index{get\_coeff\_a@{get\_coeff\_a}!PDE@{PDE}}
+\doxysubsubsection{\texorpdfstring{get\_coeff\_a()}{get\_coeff\_a()}}
+{\footnotesize\ttfamily virtual double PDE\+::get\+\_\+coeff\+\_\+a (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_complete_p_d_e_a5bcfde1af57443d88666ed1e87219c5a}{Complete\+PDE}}, and \mbox{\hyperlink{class_reduced_p_d_e_a8c06873a143622cc369fc6bfad81e9be}{Reduced\+PDE}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/PDE.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,285 @@
+\hypertarget{class_i_m_f_d}{}\doxysection{IMFD Class Reference}
+\label{class_i_m_f_d}\index{IMFD@{IMFD}}
+
+
+Classe implémentant la Méthode Implicite des différences finies.  
+
+
+
+
+{\ttfamily \#include $<$Finite\+Difference.\+h$>$}
+
+Inheritance diagram for IMFD\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_m_f_d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_m_f_d_a49cc8ac387724c921634249c5b0e9c1d}{IMFD}} (\mbox{\hyperlink{class_reduced_p_d_e}{Reduced\+PDE}} $\ast$pde\+\_\+, int M\+\_\+, int N\+\_\+, double L\+\_\+, double T\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructeur du résolveur par méthode implicite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_a9237cfcb49e059d8d8bda51df9cf961c}{set\+\_\+mesh}} ()
+\begin{DoxyCompactList}\small\item\em Fonction réalisant la discrétisation en temps et en espace. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_a8649bc77c0be10819932328cd7a2de80}{set\+\_\+matrix\+\_\+coefficients}} ()
+\begin{DoxyCompactList}\small\item\em Fonction calculant et stockant les coefficients a, b et c. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_a39da735d55909fd9fcbcdf19abc416cb}{set\+\_\+coefficients\+\_\+\+M1}} ()
+\begin{DoxyCompactList}\small\item\em Fonction remplissant les coefficients a, b, c dans la matrice M1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_aebb7206d784e095a69473d53ee011630}{set\+\_\+terminal\+\_\+condition}} ()
+\begin{DoxyCompactList}\small\item\em Fonction implémentant la condition terminale sur le vecteur C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_aae3efc58af46c96a7764ac3a2bc4a7c7}{compute\+\_\+solution}} ()
+\begin{DoxyCompactList}\small\item\em Fonction calculant la solution numérique de l\textquotesingle{}EDP en suivant le schéma des différences finies implicites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_a49c8c4ec374397882dcaa1e04510f7c9}{compute\+\_\+vector\+\_\+k}} (int m)
+\begin{DoxyCompactList}\small\item\em Fonction calculant la valeur du vecteur k à l\textquotesingle{}instant t\+\_\+\{m\}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_a9a946d3e1d74a3d03336f0d7932efc46}{compute\+\_\+\+RHS\+\_\+member}} (Matrix M, std\+::vector$<$ double $>$ v)
+\begin{DoxyCompactList}\small\item\em Fonction calculant le terme de droite de l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_i_m_f_d_afe6442fe1dde4e7a0da9b8ba89c13c4a}{thomas\+\_\+algo}} (std\+::vector$<$ double $>$ a\+\_\+, std\+::vector$<$ double $>$ b\+\_\+, std\+::vector$<$ double $>$ c\+\_\+, std\+::vector$<$ double $>$ d\+\_\+)
+\begin{DoxyCompactList}\small\item\em Fonction résolvant le système M2 $\ast$ C = RHS ==\texorpdfstring{$>$}{>} solution C dans le vecteur C. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_m_f_d_a3455dbbd28742e899e2c58d13b47730e}{safe\+\_\+csv}} (const char $\ast$file\+\_\+title)
+\begin{DoxyCompactList}\small\item\em Fonction enregistrant sur un fichier CSV les solutions trouvées par le solveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a08e08cab3a5c420548653a451e96bb40}\label{class_i_m_f_d_a08e08cab3a5c420548653a451e96bb40}} 
+\mbox{\hyperlink{class_reduced_p_d_e}{Reduced\+PDE}} $\ast$ {\bfseries pde}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a4fe53eeaaae41138e74b1bfd755987ee}\label{class_i_m_f_d_a4fe53eeaaae41138e74b1bfd755987ee}} 
+int {\bfseries M}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_af2bc4df1147563044ba8a672e74f58c1}\label{class_i_m_f_d_af2bc4df1147563044ba8a672e74f58c1}} 
+int {\bfseries N}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_ab41e026272c1bc8f2ce3146959dc291f}\label{class_i_m_f_d_ab41e026272c1bc8f2ce3146959dc291f}} 
+double {\bfseries T}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_aa00a32bd365365571a39809afbc1b413}\label{class_i_m_f_d_aa00a32bd365365571a39809afbc1b413}} 
+double {\bfseries L}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a4d2b94761edd7cf2b688e7958c2e914f}\label{class_i_m_f_d_a4d2b94761edd7cf2b688e7958c2e914f}} 
+double {\bfseries r}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a734b9ed2806d51de75bf974a45f33bba}\label{class_i_m_f_d_a734b9ed2806d51de75bf974a45f33bba}} 
+double {\bfseries sigma}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_ab096d6a651da08d2b6176a1a1e194fea}\label{class_i_m_f_d_ab096d6a651da08d2b6176a1a1e194fea}} 
+\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$ {\bfseries t}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a6aad2f0c76e133dffc02121e8072f7cb}\label{class_i_m_f_d_a6aad2f0c76e133dffc02121e8072f7cb}} 
+\mbox{\hyperlink{class_mesh}{Mesh}} $\ast$ {\bfseries s}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a80ac35a7d065b5610ffe129a1b0d6567}\label{class_i_m_f_d_a80ac35a7d065b5610ffe129a1b0d6567}} 
+double {\bfseries dt}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a26658752cad978d23e82a4a15d3acaf5}\label{class_i_m_f_d_a26658752cad978d23e82a4a15d3acaf5}} 
+double {\bfseries ds}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_ae9142cd3455bda5891aa1027d8e0a894}\label{class_i_m_f_d_ae9142cd3455bda5891aa1027d8e0a894}} 
+double {\bfseries mu}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a406516d76ae1f5f72d0d057647028269}\label{class_i_m_f_d_a406516d76ae1f5f72d0d057647028269}} 
+std\+::vector$<$ double $>$ {\bfseries a}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a692c1c384c39ee2ad239f4f8119a2f52}\label{class_i_m_f_d_a692c1c384c39ee2ad239f4f8119a2f52}} 
+std\+::vector$<$ double $>$ {\bfseries b}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a7ec52c6a4faf4501b815965c949b19b9}\label{class_i_m_f_d_a7ec52c6a4faf4501b815965c949b19b9}} 
+std\+::vector$<$ double $>$ {\bfseries c}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_a400fd2727dd74d9f1b955651486c7768}\label{class_i_m_f_d_a400fd2727dd74d9f1b955651486c7768}} 
+std\+::vector$<$ double $>$ {\bfseries C}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_ac2c60939e17252a10ce59da7b9a8ad7a}\label{class_i_m_f_d_ac2c60939e17252a10ce59da7b9a8ad7a}} 
+Matrix {\bfseries M1}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_ad5b4077f26d61c58b78880af1d0fdc85}\label{class_i_m_f_d_ad5b4077f26d61c58b78880af1d0fdc85}} 
+std\+::vector$<$ double $>$ {\bfseries k}
+\item 
+\mbox{\Hypertarget{class_i_m_f_d_ae6e34ab255bba822117b4405ff780263}\label{class_i_m_f_d_ae6e34ab255bba822117b4405ff780263}} 
+std\+::vector$<$ double $>$ {\bfseries RHS}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe implémentant la Méthode Implicite des différences finies. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_m_f_d_a49cc8ac387724c921634249c5b0e9c1d}\label{class_i_m_f_d_a49cc8ac387724c921634249c5b0e9c1d}} 
+\index{IMFD@{IMFD}!IMFD@{IMFD}}
+\index{IMFD@{IMFD}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{IMFD()}{IMFD()}}
+{\footnotesize\ttfamily IMFD\+::\+IMFD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_reduced_p_d_e}{Reduced\+PDE}} $\ast$}]{pde\+\_\+,  }\item[{int}]{M\+\_\+,  }\item[{int}]{N\+\_\+,  }\item[{double}]{L\+\_\+,  }\item[{double}]{T\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructeur du résolveur par méthode implicite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pde\+\_\+} & EDP réduite \\
+\hline
+{\em M\+\_\+} & M \+: nombre d\textquotesingle{}intervalles temporels \\
+\hline
+{\em N\+\_\+} & N \+: nombre d\textquotesingle{}intervalles spatiaux \\
+\hline
+{\em L\+\_\+} & L \+: longueur du domaine spatial \\
+\hline
+{\em T\+\_\+} & T \+: longueur du domaine temporel \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_m_f_d_a9a946d3e1d74a3d03336f0d7932efc46}\label{class_i_m_f_d_a9a946d3e1d74a3d03336f0d7932efc46}} 
+\index{IMFD@{IMFD}!compute\_RHS\_member@{compute\_RHS\_member}}
+\index{compute\_RHS\_member@{compute\_RHS\_member}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{compute\_RHS\_member()}{compute\_RHS\_member()}}
+{\footnotesize\ttfamily void IMFD\+::compute\+\_\+\+RHS\+\_\+member (\begin{DoxyParamCaption}\item[{Matrix}]{M,  }\item[{std\+::vector$<$ double $>$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant le terme de droite de l\textquotesingle{}expression. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_aae3efc58af46c96a7764ac3a2bc4a7c7}\label{class_i_m_f_d_aae3efc58af46c96a7764ac3a2bc4a7c7}} 
+\index{IMFD@{IMFD}!compute\_solution@{compute\_solution}}
+\index{compute\_solution@{compute\_solution}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{compute\_solution()}{compute\_solution()}}
+{\footnotesize\ttfamily void IMFD\+::compute\+\_\+solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant la solution numérique de l\textquotesingle{}EDP en suivant le schéma des différences finies implicites. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_a49c8c4ec374397882dcaa1e04510f7c9}\label{class_i_m_f_d_a49c8c4ec374397882dcaa1e04510f7c9}} 
+\index{IMFD@{IMFD}!compute\_vector\_k@{compute\_vector\_k}}
+\index{compute\_vector\_k@{compute\_vector\_k}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{compute\_vector\_k()}{compute\_vector\_k()}}
+{\footnotesize\ttfamily void IMFD\+::compute\+\_\+vector\+\_\+k (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant la valeur du vecteur k à l\textquotesingle{}instant t\+\_\+\{m\}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Entier m correspondant à l\textquotesingle{}instant t\+\_\+m \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_a3455dbbd28742e899e2c58d13b47730e}\label{class_i_m_f_d_a3455dbbd28742e899e2c58d13b47730e}} 
+\index{IMFD@{IMFD}!safe\_csv@{safe\_csv}}
+\index{safe\_csv@{safe\_csv}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{safe\_csv()}{safe\_csv()}}
+{\footnotesize\ttfamily void IMFD\+::safe\+\_\+csv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction enregistrant sur un fichier CSV les solutions trouvées par le solveur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+title} & Titre du fichier \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_a39da735d55909fd9fcbcdf19abc416cb}\label{class_i_m_f_d_a39da735d55909fd9fcbcdf19abc416cb}} 
+\index{IMFD@{IMFD}!set\_coefficients\_M1@{set\_coefficients\_M1}}
+\index{set\_coefficients\_M1@{set\_coefficients\_M1}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{set\_coefficients\_M1()}{set\_coefficients\_M1()}}
+{\footnotesize\ttfamily void IMFD\+::set\+\_\+coefficients\+\_\+\+M1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction remplissant les coefficients a, b, c dans la matrice M1. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_a8649bc77c0be10819932328cd7a2de80}\label{class_i_m_f_d_a8649bc77c0be10819932328cd7a2de80}} 
+\index{IMFD@{IMFD}!set\_matrix\_coefficients@{set\_matrix\_coefficients}}
+\index{set\_matrix\_coefficients@{set\_matrix\_coefficients}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{set\_matrix\_coefficients()}{set\_matrix\_coefficients()}}
+{\footnotesize\ttfamily void IMFD\+::set\+\_\+matrix\+\_\+coefficients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction calculant et stockant les coefficients a, b et c. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_a9237cfcb49e059d8d8bda51df9cf961c}\label{class_i_m_f_d_a9237cfcb49e059d8d8bda51df9cf961c}} 
+\index{IMFD@{IMFD}!set\_mesh@{set\_mesh}}
+\index{set\_mesh@{set\_mesh}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{set\_mesh()}{set\_mesh()}}
+{\footnotesize\ttfamily void IMFD\+::set\+\_\+mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction réalisant la discrétisation en temps et en espace. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_aebb7206d784e095a69473d53ee011630}\label{class_i_m_f_d_aebb7206d784e095a69473d53ee011630}} 
+\index{IMFD@{IMFD}!set\_terminal\_condition@{set\_terminal\_condition}}
+\index{set\_terminal\_condition@{set\_terminal\_condition}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{set\_terminal\_condition()}{set\_terminal\_condition()}}
+{\footnotesize\ttfamily void IMFD\+::set\+\_\+terminal\+\_\+condition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction implémentant la condition terminale sur le vecteur C. 
+
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+\mbox{\Hypertarget{class_i_m_f_d_afe6442fe1dde4e7a0da9b8ba89c13c4a}\label{class_i_m_f_d_afe6442fe1dde4e7a0da9b8ba89c13c4a}} 
+\index{IMFD@{IMFD}!thomas\_algo@{thomas\_algo}}
+\index{thomas\_algo@{thomas\_algo}!IMFD@{IMFD}}
+\doxysubsubsection{\texorpdfstring{thomas\_algo()}{thomas\_algo()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ IMFD\+::thomas\+\_\+algo (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{a\+\_\+,  }\item[{std\+::vector$<$ double $>$}]{b\+\_\+,  }\item[{std\+::vector$<$ double $>$}]{c\+\_\+,  }\item[{std\+::vector$<$ double $>$}]{d\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction résolvant le système M2 $\ast$ C = RHS ==\texorpdfstring{$>$}{>} solution C dans le vecteur C. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+} & Bande diagonale inférieure \\
+\hline
+{\em b\+\_\+} & Bande diagonale \\
+\hline
+{\em c\+\_\+} & Bande diagonale supérieure \\
+\hline
+{\em d\+\_\+} & RHS \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_finite_difference}{Finite\+Difference}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/Finite\+Difference.\+h\item 
+source/Finite\+Difference.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,187 @@
+\hypertarget{class_complete_p_d_e}{}\doxysection{Complete\+PDE Class Reference}
+\label{class_complete_p_d_e}\index{CompletePDE@{CompletePDE}}
+
+
+Classe \mbox{\hyperlink{class_complete_p_d_e}{Complete\+PDE}} numérisant l\textquotesingle{}EDP de Black-\/\+Scholes complète, ses coefficients et ses conditions aux bords.  
+
+
+
+
+{\ttfamily \#include $<$PDE.\+h$>$}
+
+Inheritance diagram for Complete\+PDE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_complete_p_d_e}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_complete_p_d_e_a8c1d46e2c8a97137833a76b58b0f9998}\label{class_complete_p_d_e_a8c1d46e2c8a97137833a76b58b0f9998}} 
+{\bfseries Complete\+PDE} (\mbox{\hyperlink{class_option}{Option}} $\ast$option\+\_\+)
+\item 
+\mbox{\Hypertarget{class_complete_p_d_e_a498b8ea0db374ce269fe6924fe72ac58}\label{class_complete_p_d_e_a498b8ea0db374ce269fe6924fe72ac58}} 
+\mbox{\hyperlink{class_option}{Option}} $\ast$ {\bfseries get\+\_\+option} () const
+\item 
+double \mbox{\hyperlink{class_complete_p_d_e_a5bcfde1af57443d88666ed1e87219c5a}{get\+\_\+coeff\+\_\+a}} () const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le coefficient a de l\textquotesingle{}EDP complète. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complete_p_d_e_af7f6ba21fc479428756ba9a245ac3bbb}{get\+\_\+coeff\+\_\+b}} (double s) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le coefficient a de l\textquotesingle{}EDP complète. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complete_p_d_e_a7c8a6b7eb546eb3a1ffbb04a2b5cd1fa}{get\+\_\+coeff\+\_\+c}} (double s) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le coefficient c de l\textquotesingle{}EDP complète. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complete_p_d_e_ac4c1ee43e073fc11fdbb2b0845764604}{get\+\_\+coeff\+\_\+d}} () const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le coefficient d de l\textquotesingle{}EDP complète. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complete_p_d_e_a6f7f41c75c7a8eeae94a449eb5ff2cc0}{get\+\_\+cdt\+\_\+bord\+\_\+b}} (double t) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant la condition au bord basse pour l\textquotesingle{}EDP complète. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complete_p_d_e_a46e673e8ebaec4c52c4d1e3a713b4c4d}{get\+\_\+cdt\+\_\+bord\+\_\+h}} (double t, double s) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant la condition au bord haute pour l\textquotesingle{}EDP complète. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_complete_p_d_e_a20fc4396f7343b81d6cf8469a1435137}{get\+\_\+cdt\+\_\+term}} (double s) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le payoff pour l\textquotesingle{}EDP complète. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_complete_p_d_e}{Complete\+PDE}} numérisant l\textquotesingle{}EDP de Black-\/\+Scholes complète, ses coefficients et ses conditions aux bords. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_complete_p_d_e_a6f7f41c75c7a8eeae94a449eb5ff2cc0}\label{class_complete_p_d_e_a6f7f41c75c7a8eeae94a449eb5ff2cc0}} 
+\index{CompletePDE@{CompletePDE}!get\_cdt\_bord\_b@{get\_cdt\_bord\_b}}
+\index{get\_cdt\_bord\_b@{get\_cdt\_bord\_b}!CompletePDE@{CompletePDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_bord\_b()}{get\_cdt\_bord\_b()}}
+{\footnotesize\ttfamily double Complete\+PDE\+::get\+\_\+cdt\+\_\+bord\+\_\+b (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant la condition au bord basse pour l\textquotesingle{}EDP complète. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Instant t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_complete_p_d_e_a46e673e8ebaec4c52c4d1e3a713b4c4d}\label{class_complete_p_d_e_a46e673e8ebaec4c52c4d1e3a713b4c4d}} 
+\index{CompletePDE@{CompletePDE}!get\_cdt\_bord\_h@{get\_cdt\_bord\_h}}
+\index{get\_cdt\_bord\_h@{get\_cdt\_bord\_h}!CompletePDE@{CompletePDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_bord\_h()}{get\_cdt\_bord\_h()}}
+{\footnotesize\ttfamily double Complete\+PDE\+::get\+\_\+cdt\+\_\+bord\+\_\+h (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant la condition au bord haute pour l\textquotesingle{}EDP complète. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Instant t \\
+\hline
+{\em s} & Position s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_complete_p_d_e_a20fc4396f7343b81d6cf8469a1435137}\label{class_complete_p_d_e_a20fc4396f7343b81d6cf8469a1435137}} 
+\index{CompletePDE@{CompletePDE}!get\_cdt\_term@{get\_cdt\_term}}
+\index{get\_cdt\_term@{get\_cdt\_term}!CompletePDE@{CompletePDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_term()}{get\_cdt\_term()}}
+{\footnotesize\ttfamily double Complete\+PDE\+::get\+\_\+cdt\+\_\+term (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant le payoff pour l\textquotesingle{}EDP complète. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Position s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_complete_p_d_e_a5bcfde1af57443d88666ed1e87219c5a}\label{class_complete_p_d_e_a5bcfde1af57443d88666ed1e87219c5a}} 
+\index{CompletePDE@{CompletePDE}!get\_coeff\_a@{get\_coeff\_a}}
+\index{get\_coeff\_a@{get\_coeff\_a}!CompletePDE@{CompletePDE}}
+\doxysubsubsection{\texorpdfstring{get\_coeff\_a()}{get\_coeff\_a()}}
+{\footnotesize\ttfamily double Complete\+PDE\+::get\+\_\+coeff\+\_\+a (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant le coefficient a de l\textquotesingle{}EDP complète. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_complete_p_d_e_af7f6ba21fc479428756ba9a245ac3bbb}\label{class_complete_p_d_e_af7f6ba21fc479428756ba9a245ac3bbb}} 
+\index{CompletePDE@{CompletePDE}!get\_coeff\_b@{get\_coeff\_b}}
+\index{get\_coeff\_b@{get\_coeff\_b}!CompletePDE@{CompletePDE}}
+\doxysubsubsection{\texorpdfstring{get\_coeff\_b()}{get\_coeff\_b()}}
+{\footnotesize\ttfamily double Complete\+PDE\+::get\+\_\+coeff\+\_\+b (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const}
+
+
+
+Fonction retournant le coefficient a de l\textquotesingle{}EDP complète. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Position s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_complete_p_d_e_a7c8a6b7eb546eb3a1ffbb04a2b5cd1fa}\label{class_complete_p_d_e_a7c8a6b7eb546eb3a1ffbb04a2b5cd1fa}} 
+\index{CompletePDE@{CompletePDE}!get\_coeff\_c@{get\_coeff\_c}}
+\index{get\_coeff\_c@{get\_coeff\_c}!CompletePDE@{CompletePDE}}
+\doxysubsubsection{\texorpdfstring{get\_coeff\_c()}{get\_coeff\_c()}}
+{\footnotesize\ttfamily double Complete\+PDE\+::get\+\_\+coeff\+\_\+c (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const}
+
+
+
+Fonction retournant le coefficient c de l\textquotesingle{}EDP complète. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Position s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_complete_p_d_e_ac4c1ee43e073fc11fdbb2b0845764604}\label{class_complete_p_d_e_ac4c1ee43e073fc11fdbb2b0845764604}} 
+\index{CompletePDE@{CompletePDE}!get\_coeff\_d@{get\_coeff\_d}}
+\index{get\_coeff\_d@{get\_coeff\_d}!CompletePDE@{CompletePDE}}
+\doxysubsubsection{\texorpdfstring{get\_coeff\_d()}{get\_coeff\_d()}}
+{\footnotesize\ttfamily double Complete\+PDE\+::get\+\_\+coeff\+\_\+d (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction retournant le coefficient d de l\textquotesingle{}EDP complète. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/PDE.\+h\item 
+source/PDE.\+cpp\end{DoxyCompactItemize}

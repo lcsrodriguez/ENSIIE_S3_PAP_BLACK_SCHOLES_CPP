@@ -1,0 +1,94 @@
+\hypertarget{_window_8h_source}{}\doxysection{Window.\+h}
+\label{_window_8h_source}\index{source/Window.h@{source/Window.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_H\_WINDOW}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_H\_WINDOW}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}SDL2/SDL.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}SDL2/SDL\_ttf.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define THRESHOLD\_MIN 1e-\/8}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define POINT\_RADIUS 1}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define FONT\_PATH "{}font/arial.ttf"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define FONT\_SIZE 22   }\textcolor{comment}{// 25}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_label}{Label}} \{}
+\DoxyCodeLine{19         \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{20         \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{21         std::string text;}
+\DoxyCodeLine{22         \textcolor{keywordtype}{int} r;}
+\DoxyCodeLine{23         \textcolor{keywordtype}{int} g;}
+\DoxyCodeLine{24         \textcolor{keywordtype}{int} b;}
+\DoxyCodeLine{25         \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{32 \textcolor{keyword}{class }\mbox{\hyperlink{class_window}{Window}} \{}
+\DoxyCodeLine{33     \textcolor{keyword}{private}:}
+\DoxyCodeLine{34         \textcolor{comment}{// Paramètres de la fenêtre à afficher}}
+\DoxyCodeLine{35         \textcolor{keyword}{static} \textcolor{keywordtype}{int} window\_id;}
+\DoxyCodeLine{36         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* window\_title;}
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} window\_width;}
+\DoxyCodeLine{38         \textcolor{keywordtype}{int} window\_height;}
+\DoxyCodeLine{39         \textcolor{keywordtype}{float} alpha;}
+\DoxyCodeLine{40         \textcolor{keywordtype}{double} L;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{public}:}
+\DoxyCodeLine{43         \textcolor{comment}{// Variables de fenêtre et de renderer}}
+\DoxyCodeLine{44         SDL\_Window* window;}
+\DoxyCodeLine{45         SDL\_Renderer* renderer;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         std::vector<double> x;}
+\DoxyCodeLine{48         std::vector<double> y1;}
+\DoxyCodeLine{49         std::vector<double> y2;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \textcolor{keywordtype}{double} y\_min\_1;}
+\DoxyCodeLine{52         \textcolor{keywordtype}{double} y\_min\_2;}
+\DoxyCodeLine{53         \textcolor{keywordtype}{double} y\_max\_1;}
+\DoxyCodeLine{54         \textcolor{keywordtype}{double} y\_max\_2;}
+\DoxyCodeLine{55         \textcolor{keywordtype}{double} Y\_MIN;}
+\DoxyCodeLine{56         \textcolor{keywordtype}{double} Y\_MAX;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{comment}{// Vecteur contenant les différents textes à afficher sur la fenêtre actuelle}}
+\DoxyCodeLine{59         std::vector<Label> labels;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keyword}{public}:}
+\DoxyCodeLine{62         \mbox{\hyperlink{class_window_ab2ef7e269974e664bf7b72b00574a2da}{Window}}(\textcolor{keywordtype}{double} L\_, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* window\_title\_ = \textcolor{stringliteral}{"{}Option européenne [PAP]"{}}, \textcolor{keywordtype}{int} window\_width\_ = 640, \textcolor{keywordtype}{int} window\_height\_ = 480);}
+\DoxyCodeLine{63         \mbox{\hyperlink{class_window_a245d821e6016fa1f6970ccbbedd635f6}{\string~Window}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_a38bc43bdd1a97e5de7f346ba4c3957ef}{clear}}();   \textcolor{comment}{// Suppression des anciennes textures sur le graphique}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \textcolor{comment}{// Afficheur du cadre}}
+\DoxyCodeLine{68         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_ade8cb2892f9b72b5a278613afe83d75e}{plot\_frame}}();}
+\DoxyCodeLine{69         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_window_a2a26b173351e9272d5994f41dafd3a30}{map}}(\textcolor{keywordtype}{double} x, \textcolor{keywordtype}{double} in\_min, \textcolor{keywordtype}{double} in\_max, \textcolor{keywordtype}{double} out\_min, \textcolor{keywordtype}{double} out\_max);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         \textcolor{comment}{// Setters des coordonnées}}
+\DoxyCodeLine{72         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_af3f34efafef04e8d1d86fa8cbf563e32}{set\_x}}(std::vector<double> x\_);     \textcolor{comment}{// Ajout des données en abscisse}}
+\DoxyCodeLine{73         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_ae60099872dda2b2f4a2b1494816ccd23}{set\_y1}}(std::vector<double> y1\_);   \textcolor{comment}{// Ajout des données en ordonnées pour la première série de points}}
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_a3272e4d672f897a375b4440e293ffd65}{set\_y2}}(std::vector<double> y2\_);   \textcolor{comment}{// Ajout des données en ordonnées pour la deuxième série de points}}
+\DoxyCodeLine{75         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_ade1e3c81eaa96c340f06fe0833dd730e}{get\_graph\_boundaries}}();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77         \textcolor{comment}{// Checkers des données}}
+\DoxyCodeLine{78         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_window_a53e6b0295fa24f664991d3db90988c23}{has\_y1}}();}
+\DoxyCodeLine{79         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_window_ab9aa6402def378ed38fe1b4f9d78ffa2}{has\_y2}}();}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81         \textcolor{comment}{// Afficheurs}}
+\DoxyCodeLine{82         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_aeda4d030257746c660458d34b644bc59}{plot\_y1}}();}
+\DoxyCodeLine{83         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_a94b09de4b62552c289e8d3a98660c3d8}{plot\_y2}}();}
+\DoxyCodeLine{84         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_a9c395371b9552980e9b4bda8748589b7}{draw\_circle}}(\textcolor{keywordtype}{int} n\_cx, \textcolor{keywordtype}{int} n\_cy, \textcolor{keywordtype}{int} radius = POINT\_RADIUS);}
+\DoxyCodeLine{85         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_ac4909420f93bb058517b6a74f20fb152}{plot}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87         \textcolor{comment}{// Affichage de tous les labels}}
+\DoxyCodeLine{88         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_a2f54b6d3f55beccd78c76334360f467c}{print\_labels}}();}
+\DoxyCodeLine{89         \textcolor{comment}{// Affichage d'un label}}
+\DoxyCodeLine{90         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_a7f177af061abf005cbc03025d82acd60}{print\_label}}(\mbox{\hyperlink{struct_label}{Label}} l);}
+\DoxyCodeLine{91         \textcolor{comment}{// Ajout d'un texte dans la pile des textes}}
+\DoxyCodeLine{92         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_window_a2f803a30cd1b642141ea6a6afb8522ff}{set\_text}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, std::string text, \textcolor{keywordtype}{int} r = 255, \textcolor{keywordtype}{int} g = 255, \textcolor{keywordtype}{int} b = 255, \textcolor{keywordtype}{int} size = FONT\_SIZE);}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

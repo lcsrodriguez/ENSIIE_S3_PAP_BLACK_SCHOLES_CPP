@@ -1,0 +1,147 @@
+\hypertarget{class_reduced_p_d_e}{}\doxysection{Reduced\+PDE Class Reference}
+\label{class_reduced_p_d_e}\index{ReducedPDE@{ReducedPDE}}
+
+
+Classe \mbox{\hyperlink{class_reduced_p_d_e}{Reduced\+PDE}} numérisant l\textquotesingle{}EDP de Black-\/\+Scholes réduite, ses coefficients et ses conditions aux bords.  
+
+
+
+
+{\ttfamily \#include $<$PDE.\+h$>$}
+
+Inheritance diagram for Reduced\+PDE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_reduced_p_d_e}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_reduced_p_d_e_a0467c7905bb2e829846826da004d0cf0}\label{class_reduced_p_d_e_a0467c7905bb2e829846826da004d0cf0}} 
+{\bfseries Reduced\+PDE} (\mbox{\hyperlink{class_option}{Option}} $\ast$option\+\_\+)
+\item 
+\mbox{\Hypertarget{class_reduced_p_d_e_a423258fb6c851aba1e8e7a3867f70d2b}\label{class_reduced_p_d_e_a423258fb6c851aba1e8e7a3867f70d2b}} 
+\mbox{\hyperlink{class_option}{Option}} $\ast$ {\bfseries get\+\_\+option} () const
+\item 
+double \mbox{\hyperlink{class_reduced_p_d_e_a8c06873a143622cc369fc6bfad81e9be}{get\+\_\+coeff\+\_\+a}} () const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le coefficient a de l\textquotesingle{}EDP réduite. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_reduced_p_d_e_a43d041fa5e3d275c9b463ba3dd7c5b6e}{get\+\_\+coeff\+\_\+b}} () const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le coefficient a de l\textquotesingle{}EDP réduite. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_reduced_p_d_e_ad4a1d797e43ab45f2071a33c19e9efbb}{get\+\_\+cdt\+\_\+bord\+\_\+b}} (double t) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant la condition au bord basse pour l\textquotesingle{}EDP réduite. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_reduced_p_d_e_a43f5d60a3d23694c72ab6963e77a6a8c}{get\+\_\+cdt\+\_\+bord\+\_\+h}} (double t, double s) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant la condition au bord haute pour l\textquotesingle{}EDP réduite. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_reduced_p_d_e_a883f50c931414f6a2d7a7e0c2bf1a95b}{get\+\_\+cdt\+\_\+term}} (double s) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le payoff pour l\textquotesingle{}EDP réduite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Classe \mbox{\hyperlink{class_reduced_p_d_e}{Reduced\+PDE}} numérisant l\textquotesingle{}EDP de Black-\/\+Scholes réduite, ses coefficients et ses conditions aux bords. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reduced_p_d_e_ad4a1d797e43ab45f2071a33c19e9efbb}\label{class_reduced_p_d_e_ad4a1d797e43ab45f2071a33c19e9efbb}} 
+\index{ReducedPDE@{ReducedPDE}!get\_cdt\_bord\_b@{get\_cdt\_bord\_b}}
+\index{get\_cdt\_bord\_b@{get\_cdt\_bord\_b}!ReducedPDE@{ReducedPDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_bord\_b()}{get\_cdt\_bord\_b()}}
+{\footnotesize\ttfamily double Reduced\+PDE\+::get\+\_\+cdt\+\_\+bord\+\_\+b (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant la condition au bord basse pour l\textquotesingle{}EDP réduite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Instant t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_reduced_p_d_e_a43f5d60a3d23694c72ab6963e77a6a8c}\label{class_reduced_p_d_e_a43f5d60a3d23694c72ab6963e77a6a8c}} 
+\index{ReducedPDE@{ReducedPDE}!get\_cdt\_bord\_h@{get\_cdt\_bord\_h}}
+\index{get\_cdt\_bord\_h@{get\_cdt\_bord\_h}!ReducedPDE@{ReducedPDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_bord\_h()}{get\_cdt\_bord\_h()}}
+{\footnotesize\ttfamily double Reduced\+PDE\+::get\+\_\+cdt\+\_\+bord\+\_\+h (\begin{DoxyParamCaption}\item[{double}]{t,  }\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant la condition au bord haute pour l\textquotesingle{}EDP réduite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Instant t \\
+\hline
+{\em s} & Position s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_reduced_p_d_e_a883f50c931414f6a2d7a7e0c2bf1a95b}\label{class_reduced_p_d_e_a883f50c931414f6a2d7a7e0c2bf1a95b}} 
+\index{ReducedPDE@{ReducedPDE}!get\_cdt\_term@{get\_cdt\_term}}
+\index{get\_cdt\_term@{get\_cdt\_term}!ReducedPDE@{ReducedPDE}}
+\doxysubsubsection{\texorpdfstring{get\_cdt\_term()}{get\_cdt\_term()}}
+{\footnotesize\ttfamily double Reduced\+PDE\+::get\+\_\+cdt\+\_\+term (\begin{DoxyParamCaption}\item[{double}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant le payoff pour l\textquotesingle{}EDP réduite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Position s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_reduced_p_d_e_a8c06873a143622cc369fc6bfad81e9be}\label{class_reduced_p_d_e_a8c06873a143622cc369fc6bfad81e9be}} 
+\index{ReducedPDE@{ReducedPDE}!get\_coeff\_a@{get\_coeff\_a}}
+\index{get\_coeff\_a@{get\_coeff\_a}!ReducedPDE@{ReducedPDE}}
+\doxysubsubsection{\texorpdfstring{get\_coeff\_a()}{get\_coeff\_a()}}
+{\footnotesize\ttfamily double Reduced\+PDE\+::get\+\_\+coeff\+\_\+a (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant le coefficient a de l\textquotesingle{}EDP réduite. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_p_d_e}{PDE}}.
+
+\mbox{\Hypertarget{class_reduced_p_d_e_a43d041fa5e3d275c9b463ba3dd7c5b6e}\label{class_reduced_p_d_e_a43d041fa5e3d275c9b463ba3dd7c5b6e}} 
+\index{ReducedPDE@{ReducedPDE}!get\_coeff\_b@{get\_coeff\_b}}
+\index{get\_coeff\_b@{get\_coeff\_b}!ReducedPDE@{ReducedPDE}}
+\doxysubsubsection{\texorpdfstring{get\_coeff\_b()}{get\_coeff\_b()}}
+{\footnotesize\ttfamily double Reduced\+PDE\+::get\+\_\+coeff\+\_\+b (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Fonction retournant le coefficient a de l\textquotesingle{}EDP réduite. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/PDE.\+h\item 
+source/PDE.\+cpp\end{DoxyCompactItemize}

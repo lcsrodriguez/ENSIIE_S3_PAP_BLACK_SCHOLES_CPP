@@ -1,0 +1,133 @@
+\hypertarget{_finite_difference_8h_source}{}\doxysection{Finite\+Difference.\+h}
+\label{_finite_difference_8h_source}\index{source/FiniteDifference.h@{source/FiniteDifference.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_H\_FINITE\_DIFFERENCE}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_H\_FINITE\_DIFFERENCE}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Mesh.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}PDE.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}math.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define THRESHOLD\_MIN 1e-\/8}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{14 \textcolor{keyword}{typedef} \textcolor{keywordtype}{double}** Matrix;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_finite_difference}{FiniteDifference}} \{}
+\DoxyCodeLine{20         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} set\_mesh() = 0;}
+\DoxyCodeLine{21         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} set\_matrix\_coefficients() = 0;}
+\DoxyCodeLine{22         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} set\_coefficients\_M1() = 0;}
+\DoxyCodeLine{23         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} set\_terminal\_condition() = 0;}
+\DoxyCodeLine{24         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} compute\_solution() = 0;}
+\DoxyCodeLine{25         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} compute\_vector\_k(\textcolor{keywordtype}{int} m) = 0;}
+\DoxyCodeLine{26         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} compute\_RHS\_member(Matrix M, std::vector<double> v) = 0;}
+\DoxyCodeLine{27         \textcolor{keyword}{virtual} std::vector<double> thomas\_algo(std::vector<double> a\_, std::vector<double> b\_, std::vector<double> c\_, std::vector<double> d\_) = 0;}
+\DoxyCodeLine{28         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} safe\_csv(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file\_title) = 0;}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_m_f_d}{IMFD}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_finite_difference}{FiniteDifference}} \{}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:                \textcolor{comment}{// data-\/members}}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_reduced_p_d_e}{ReducedPDE}}* pde;   \textcolor{comment}{// EDP réduite}}
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} M;             \textcolor{comment}{// Nombre d'intervalles de discrétisation temporelle}}
+\DoxyCodeLine{38         \textcolor{keywordtype}{int} N;             \textcolor{comment}{// Nombre d'intervalles de discrétisation spatiale}}
+\DoxyCodeLine{39         \textcolor{keywordtype}{double} T;          \textcolor{comment}{// Largeur de l'intervalle temporel}}
+\DoxyCodeLine{40         \textcolor{keywordtype}{double} L;          \textcolor{comment}{// Largeur de l'intervalle spatial}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{public}:}
+\DoxyCodeLine{43         \mbox{\hyperlink{class_i_m_f_d_a49cc8ac387724c921634249c5b0e9c1d}{IMFD}}(\mbox{\hyperlink{class_reduced_p_d_e}{ReducedPDE}}* pde\_, \textcolor{keywordtype}{int} M\_, \textcolor{keywordtype}{int} N\_, \textcolor{keywordtype}{double} L\_, \textcolor{keywordtype}{double} T\_);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keyword}{public}:}
+\DoxyCodeLine{46         \textcolor{keywordtype}{double} r;}
+\DoxyCodeLine{47         \textcolor{keywordtype}{double} sigma;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{comment}{// Discrétisation de l'espace-\/temps}}
+\DoxyCodeLine{50         \mbox{\hyperlink{class_mesh}{Mesh}}* t;}
+\DoxyCodeLine{51         \mbox{\hyperlink{class_mesh}{Mesh}}* s;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \textcolor{comment}{// Pas de discrétisation}}
+\DoxyCodeLine{54         \textcolor{keywordtype}{double} dt;}
+\DoxyCodeLine{55         \textcolor{keywordtype}{double} ds;}
+\DoxyCodeLine{56         \textcolor{keywordtype}{double} mu;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{comment}{// Coefficients des matrices}}
+\DoxyCodeLine{59         std::vector<double> a;}
+\DoxyCodeLine{60         std::vector<double> b;}
+\DoxyCodeLine{61         std::vector<double> c;}
+\DoxyCodeLine{62         std::vector<double> C;}
+\DoxyCodeLine{63         Matrix M1;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{comment}{// Vecteur k pour les conditions initiales}}
+\DoxyCodeLine{66         std::vector<double> k;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68         \textcolor{comment}{// Vecteur RHS représentant le membre de droite}}
+\DoxyCodeLine{69         std::vector<double> RHS;}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{keyword}{public}:}
+\DoxyCodeLine{72         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_a9237cfcb49e059d8d8bda51df9cf961c}{set\_mesh}}();}
+\DoxyCodeLine{73         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_a8649bc77c0be10819932328cd7a2de80}{set\_matrix\_coefficients}}();}
+\DoxyCodeLine{74         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_a39da735d55909fd9fcbcdf19abc416cb}{set\_coefficients\_M1}}();}
+\DoxyCodeLine{75         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_aebb7206d784e095a69473d53ee011630}{set\_terminal\_condition}}();}
+\DoxyCodeLine{76         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_aae3efc58af46c96a7764ac3a2bc4a7c7}{compute\_solution}}();}
+\DoxyCodeLine{77         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_a49c8c4ec374397882dcaa1e04510f7c9}{compute\_vector\_k}}(\textcolor{keywordtype}{int} m);}
+\DoxyCodeLine{78         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_a9a946d3e1d74a3d03336f0d7932efc46}{compute\_RHS\_member}}(Matrix M, std::vector<double> v);}
+\DoxyCodeLine{79         std::vector<double> \mbox{\hyperlink{class_i_m_f_d_afe6442fe1dde4e7a0da9b8ba89c13c4a}{thomas\_algo}}(std::vector<double> a\_, std::vector<double> b\_, std::vector<double> c\_, std::vector<double> d\_);}
+\DoxyCodeLine{80         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_m_f_d_a3455dbbd28742e899e2c58d13b47730e}{safe\_csv}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file\_title);}
+\DoxyCodeLine{81 \};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86 \textcolor{keyword}{class }\mbox{\hyperlink{class_crank_nicholson_f_d}{CrankNicholsonFD}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_finite_difference}{FiniteDifference}} \{}
+\DoxyCodeLine{87     \textcolor{keyword}{public}:                 \textcolor{comment}{// data-\/members}}
+\DoxyCodeLine{88         \mbox{\hyperlink{class_complete_p_d_e}{CompletePDE}}* pde;   \textcolor{comment}{// EDP complète}}
+\DoxyCodeLine{89         \textcolor{keywordtype}{int} M;              \textcolor{comment}{// Nombre d'intervalles de discrétisation temporelle}}
+\DoxyCodeLine{90         \textcolor{keywordtype}{int} N;              \textcolor{comment}{// Nombre d'intervalles de discrétisation spatiale}}
+\DoxyCodeLine{91         \textcolor{keywordtype}{double} T;           \textcolor{comment}{// Largeur de l'intervalle temporel}}
+\DoxyCodeLine{92         \textcolor{keywordtype}{double} L;           \textcolor{comment}{// Largeur de l'intervalle spatial}}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keyword}{public}:}
+\DoxyCodeLine{95         \mbox{\hyperlink{class_crank_nicholson_f_d_a25f5c6c82f436bbc5e4595144c1aad81}{CrankNicholsonFD}}(\mbox{\hyperlink{class_complete_p_d_e}{CompletePDE}}* pde\_, \textcolor{keywordtype}{int} M\_, \textcolor{keywordtype}{int} N\_, \textcolor{keywordtype}{double} L\_, \textcolor{keywordtype}{double} T\_);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{keyword}{public}:}
+\DoxyCodeLine{98         \textcolor{keywordtype}{double} r;}
+\DoxyCodeLine{99         \textcolor{keywordtype}{double} sigma;}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101         \textcolor{comment}{// Discrétisation de l'espace-\/temps}}
+\DoxyCodeLine{102         \mbox{\hyperlink{class_mesh}{Mesh}}* t;}
+\DoxyCodeLine{103         \mbox{\hyperlink{class_mesh}{Mesh}}* s;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         \textcolor{comment}{// Pas de discrétisation}}
+\DoxyCodeLine{106         \textcolor{keywordtype}{double} dt;}
+\DoxyCodeLine{107         \textcolor{keywordtype}{double} ds;}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109         \textcolor{comment}{// Coefficients des matrices}}
+\DoxyCodeLine{110         std::vector<double> a;}
+\DoxyCodeLine{111         std::vector<double> b;}
+\DoxyCodeLine{112         std::vector<double> c;}
+\DoxyCodeLine{113         std::vector<double> d;}
+\DoxyCodeLine{114         std::vector<double> e;   \textcolor{comment}{// = -\/ a}}
+\DoxyCodeLine{115         std::vector<double> f;   \textcolor{comment}{// = -\/ c}}
+\DoxyCodeLine{116         std::vector<double> C;}
+\DoxyCodeLine{117         Matrix M1;}
+\DoxyCodeLine{118         Matrix M2;}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120         \textcolor{comment}{// Vecteur k pour les conditions initiales}}
+\DoxyCodeLine{121         std::vector<double> k;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123         \textcolor{comment}{// Vecteur RHS représentant le membre de droite}}
+\DoxyCodeLine{124         std::vector<double> RHS;}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     \textcolor{keyword}{public}:}
+\DoxyCodeLine{127         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_a0c823c4fb48ff83637276cae7b994cd9}{set\_mesh}}();}
+\DoxyCodeLine{128         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_a5fc7399f3c6d41b2dc1c0fefdbf465ec}{set\_matrix\_coefficients}}();}
+\DoxyCodeLine{129         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_a9c391104ad3179f456595b6cdb5caff1}{set\_coefficients\_M1}}();}
+\DoxyCodeLine{130         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_a9c7d01b2fd5a752f0298737edbba3695}{set\_coefficients\_M2}}();}
+\DoxyCodeLine{131         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_a651f596e48cbc4662972526397b14c7c}{set\_terminal\_condition}}();}
+\DoxyCodeLine{132         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_ac4f211d759dd10e34756b9b171ecf9a8}{compute\_solution}}();}
+\DoxyCodeLine{133         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_a1b5964795d48a6752216249744ebc5d8}{compute\_vector\_k}}(\textcolor{keywordtype}{int} m);}
+\DoxyCodeLine{134         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_a7632dc54a71878702f80a73f0434849b}{compute\_RHS\_member}}(Matrix M, std::vector<double> v);}
+\DoxyCodeLine{135         std::vector<double> \mbox{\hyperlink{class_crank_nicholson_f_d_ae4c4d031a55e4447df0d471d4abd0a98}{thomas\_algo}}(std::vector<double> a\_, std::vector<double> b\_, std::vector<double> c\_, std::vector<double> d\_);}
+\DoxyCodeLine{136         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_crank_nicholson_f_d_aa9e1329db746db3d1feb752ec1f003f8}{safe\_csv}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file\_title);}
+\DoxyCodeLine{137 \};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,71 @@
+\hypertarget{class_call}{}\doxysection{Call Class Reference}
+\label{class_call}\index{Call@{Call}}
+
+
+Classe implémentant le payoff \mbox{\hyperlink{class_call}{Call}}. Hérite de la classe abstraite \mbox{\hyperlink{class_payoff}{Payoff}}.  
+
+
+
+
+{\ttfamily \#include $<$Payoff.\+h$>$}
+
+Inheritance diagram for Call\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_call}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_call_a1aa8bf4dae0c071f86e0c4dc5a132048}\label{class_call_a1aa8bf4dae0c071f86e0c4dc5a132048}} 
+{\bfseries Call} (const double \&K\+\_\+)
+\item 
+int \mbox{\hyperlink{class_call_af03cd06b7483cbbdfd7c264bc0e1fd45}{get\+\_\+payoff\+\_\+type}} () const
+\item 
+virtual double \mbox{\hyperlink{class_call_a710d36f6eb0567803aab3f2daccced2f}{operator()}} (const double \&S) const
+\begin{DoxyCompactList}\small\item\em Fonction retournant le payoff d\textquotesingle{}un \mbox{\hyperlink{class_call}{Call}} européen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe implémentant le payoff \mbox{\hyperlink{class_call}{Call}}. Hérite de la classe abstraite \mbox{\hyperlink{class_payoff}{Payoff}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_call_af03cd06b7483cbbdfd7c264bc0e1fd45}\label{class_call_af03cd06b7483cbbdfd7c264bc0e1fd45}} 
+\index{Call@{Call}!get\_payoff\_type@{get\_payoff\_type}}
+\index{get\_payoff\_type@{get\_payoff\_type}!Call@{Call}}
+\doxysubsubsection{\texorpdfstring{get\_payoff\_type()}{get\_payoff\_type()}}
+{\footnotesize\ttfamily int Call\+::get\+\_\+payoff\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_payoff}{Payoff}}.
+
+\mbox{\Hypertarget{class_call_a710d36f6eb0567803aab3f2daccced2f}\label{class_call_a710d36f6eb0567803aab3f2daccced2f}} 
+\index{Call@{Call}!operator()@{operator()}}
+\index{operator()@{operator()}!Call@{Call}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily double Call\+::operator() (\begin{DoxyParamCaption}\item[{const double \&}]{S }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Fonction retournant le payoff d\textquotesingle{}un \mbox{\hyperlink{class_call}{Call}} européen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_payoff}{Payoff}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+source/Payoff.\+h\item 
+source/Payoff.\+cpp\end{DoxyCompactItemize}

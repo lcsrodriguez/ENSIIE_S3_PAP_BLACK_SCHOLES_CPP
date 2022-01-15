@@ -1,0 +1,25 @@
+\hypertarget{_option_8h_source}{}\doxysection{Option.\+h}
+\label{_option_8h_source}\index{source/Option.h@{source/Option.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_H\_OPTION}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_H\_OPTION}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Payoff.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_option}{Option}} \{}
+\DoxyCodeLine{10     \textcolor{keyword}{public}:}
+\DoxyCodeLine{11         \mbox{\hyperlink{class_payoff}{Payoff}}* payoff;}
+\DoxyCodeLine{12         \textcolor{keywordtype}{double} r;}
+\DoxyCodeLine{13         \textcolor{keywordtype}{double} sigma;}
+\DoxyCodeLine{14         \textcolor{keywordtype}{double} K;}
+\DoxyCodeLine{15         \textcolor{keywordtype}{double} T;}
+\DoxyCodeLine{16         \textcolor{keywordtype}{double} L;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keyword}{public}:}
+\DoxyCodeLine{19         \mbox{\hyperlink{class_option}{Option}}(\mbox{\hyperlink{class_payoff}{Payoff}}* payoff\_, \textcolor{keywordtype}{double} T\_, \textcolor{keywordtype}{double} r\_, \textcolor{keywordtype}{double} sigma\_, \textcolor{keywordtype}{double} K\_, \textcolor{keywordtype}{double} L\_) : payoff(payoff\_), r(r\_), sigma(sigma\_), K(K\_), T(T\_), L(L\_)\{\};}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
