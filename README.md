@@ -12,6 +12,14 @@ This current project has multiple objectives :
 
 ## Set up & Execution
 
+### Dependencies
+
+In order to plot the solutions and the numerical error between the two implemented methods, we are using **SDL2** library (Simple DirectMedia Layer).
+
+According to the host machine, follow the instructions on [this page](https://wiki.libsdl.org/Installation).
+
+### Setting up step-by-step
+
 ```bash
 mkdir bs_cpp_project
 cd bs_cpp_project
