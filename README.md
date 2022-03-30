@@ -8,7 +8,7 @@ This current project has multiple objectives :
 - study finite difference methods and its differents domain discretization models involving implicit and theta-schema stencils
 - transform the main PDE into a so-called "Reduced PDE" representing 1D-diffusion equation
 - create and implement an optimized oriented-object structure
-- develop a complete and enhanced wrapper of SDL2 library (sdl2 + sdl2_ttf) to handle graphic/text configuration with much more flexibility
+- develop a complete and enhanced wrapper of the SDL2 library (sdl2 + sdl2_ttf) to handle graphic/text configuration with much more flexibility
 
 ## Set up & Execution
 
