@@ -12,19 +12,27 @@ This current project has multiple objectives :
 
 ## Set up & Execution
 
-```
+### Dependencies
+
+In order to plot the solutions and the numerical error between the two implemented methods, we are using **SDL2** library (Simple DirectMedia Layer).
+
+According to the host machine, follow the instructions on [this page](https://wiki.libsdl.org/Installation).
+
+### Setting up step-by-step
+
+```bash
 mkdir bs_cpp_project
 cd bs_cpp_project
 git clone https://github.com/lcsrodriguez/ENSIIE_S3_PAP_BLACK_SCHOLES_CPP.git
 ```
 
 To generate a full and well-styled technical documentation of the project, please type :
-```
+```bash
 doxygen Doxyfile
 ```
 
 To execute the main program, please execute the following block :
-```
+```bash
 cd source
 rm projet
 g++ -g -Wall -Wextra -o projet *.cpp `pkg-config --cflags --libs sdl2 sdl2_ttf`
