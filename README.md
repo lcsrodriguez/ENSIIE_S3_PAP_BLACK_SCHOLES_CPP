@@ -21,9 +21,8 @@ According to the host machine, follow the instructions on [this page](https://wi
 ### Setting up step-by-step
 
 ```bash
-mkdir bs_cpp_project
-cd bs_cpp_project
 git clone https://github.com/lcsrodriguez/ENSIIE_S3_PAP_BLACK_SCHOLES_CPP.git
+cd ENSIIE_S3_PAP_BLACK_SCHOLES_CPP
 ```
 
 To generate a full and well-styled technical documentation of the project, please type :
