@@ -13,12 +13,12 @@
 
 /**
  * @brief Fonction principale du programme permettant de réaliser les tests
- * @return int 
+ * @return int
  */
 int main() {
         std::cout << "-------------------------------------------------------\n"
                   << "\n\tProjet PAP - Equation de Black et Scholes\n\n"
-                  << "\n\t Sarahnour GHAITH - Lucas RODRIGUEZ\n"
+                  << "\n\t Lucas RODRIGUEZ\n"
                   << "-------------------------------------------------------"
                   << std::endl;
 
